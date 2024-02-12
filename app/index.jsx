@@ -37,20 +37,30 @@ const Home = () => {
   const router = useRouter();
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.secondary }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
       <Stack.Screen
         options={{
-          headerStyle: { backgroundColor: COLORS.secondary },
+          headerStyle: { backgroundColor: COLORS.white },
           headerShadowVisible: false,
+          //This is for the left side of the header
           headerLeft: () => (
             <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
           ),
+          //This is for the right side of the header
           headerRight: () => (
-            <ScreenHeaderBtn iconUrl={images.profile} dimension="60%" />
+            <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
           ),
+          //This is for the header title
+          headerTitle: "",
         }}
       />
-      <ScrollView showsHorizontalScrollIndicator={false}></ScrollView>
+      <ScrollView showsHorizontalScrollIndicator={false}>
+        <View style={{ flex: 1, padding: SIZES.medium }}>
+          <Welcome />
+          <Popularjobs />
+          <Nearbyjobs />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

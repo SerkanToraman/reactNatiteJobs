@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     fontFamily: FONT.regular,
+    backgroundColor: COLORS.lightWhite,
     width: "100%",
     height: "100%",
     paddingHorizontal: SIZES.medium,
